@@ -1,7 +1,61 @@
+/* color and text for the page*/
+
 body {
-    background-color: gray;
+    background-color: lightgrey;
+    font-family: "Roboto", sans-serif;
+    color: #37434e;
 }
+
+/* heading */
+
+.heading {
+    text-align: center;
+    font-size: 5px;
+}
+
+.logo {
+    height: 40px;
+    padding-left: 20px;
+}
+
+/* the game area */
 
 .game-area {
     background-color: yellowgreen;
+    box-sizing: border-box;
+    border-radius: 25px;
+    width: 90%;
+    height: 200px;
 }
+
+/* controls area */
+
+.btn {
+    border-radius: 25px;
+    color: #37434e;
+    background-color: #e0a22f;
+    width: 15%;
+    height:75px;
+    padding: 30px 30px 30px 30px;
+    margin: 25px 0 0 25px;
+    border: 1px solid #C9D4CD;
+    box-sizing: border-box;
+    font-size: large;
+    }
+
+.btn a:hover {
+    color: #e0a22f;
+    background-color: #37434e;
+}
+
+/* results area*/
+
+.results-area {
+    float: left;
+    text-align: center;
+    padding: 30px 30px 30px 30px;
+    margin: 25px 0 0 25px;
+}
+
+/* media queries */
+
