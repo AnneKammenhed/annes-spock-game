@@ -4,17 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <meta name="description" content="Annes Spock Game is fun!">
+    <meta name="keywords" content="rock, paper, scissors, spock, lizard, fun">
+
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Annes Spock Game</title>
 </head>
+
 <body>
     <h1 class="logo">Annes Spock Game</h1>
-    <div class="game-area">Game area</div>
-    <div class="scores-area">
-        <p class="scores">My wins <span id="my-score">0</span></p>
-        <p class="scores">Computer wins <span id="computer-score">0</span></p>
+    <div class="game-area">
+        <div class="controls-area">
+            <button class="byn btn--big btn--rock"><i class="fa-solid fa-hand-back-fist"></i></button>
+            <button class="byn btn--big btn--paper"><i class="fa-solid fa-hand"></i></button>
+            <button class="byn btn--big btn--scissors"><i class="fa-solid fa-hand-scissors"></i></button>
+            <button class="byn btn--big btn--lizard"><i class="fa-solid fa-hand-lizard"></i></button>
+            <button class="byn btn--big btn--spock"><i class="fa-solid fa-hand-spock"></i></button>
+        </div>
+        <div class="results-area">
+            <span id="player">Player</span>
+            <span id="computer">Computer</span>
+        </div>
     </div>
+    <div class="scores-area">
+        <p class="scores">My wins<span id="my-score">0</span></p>
+        <p class="scores">Computer wins<span id="computer-score">0</span></p>
+    </div>
+    
+    
+    <script src="https://kit.fontawesome.com/93a6038a78.js" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>

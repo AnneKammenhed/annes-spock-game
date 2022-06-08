@@ -1,3 +1,7 @@
 body {
-    background-color: green;
+    background-color: gray;
+}
+
+.game-area {
+    background-color: yellowgreen;
 }
