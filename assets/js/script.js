@@ -12,20 +12,28 @@ document.addEventListener("DOMContentLoaded", function() {
     for (let button of buttons) {
         button.addEventListener("click", function() {
             if (this.getAttribute("data-type")) {
-                alert("Let's play Annes Spock Game!");
+                runGame(gameType);
             } 
         })
     }
+
+    runGame("submit");
 })
 
 /**
  * The main game function to run the game
 */
-function runGame() {
+function runGame(gameType) {
+
     //choose random computer choice
     let computerChoice = Math.floor(Math.random() * 4)
-} 
 
+    if (gameType === "submit") {
+        displayComputerChoice (computerChoice);
+        displayPlayerChoice ();
+    }
+
+} 
 
 /**
  * Check wich answer is true checkAnswer function
@@ -40,7 +48,14 @@ function runGame() {
  * display player choice
  */
 
+function displayPlayerChoice(){
+    document.getElementById("player-choice").src = `assets/images/${[playerChoice]}.jpg`;
+}
 
 /**
  * display computer choice
  */
+
+ function displayComputerChoice(){
+    document.getElementById("computer-choice").src = `assets/images/${[computerChoice]}.jpg`;
+}

@@ -42,13 +42,44 @@ body {
    height: 80px;
     }
 
-.btn img:hover {
-    color: #e0a22f;
-    background-color: #37434e;
+    .btn img:hover {
+        color: #e0a22f;
+        background-color: #37434e;
+    }
+
+/* results area*/
+
+.results-area {
+    text-align: center;
+    padding: 30px 30px 30px 30px;
+    margin: 25px 0 0 25px;
+    box-sizing: border-box;
+    width:75%;
 }
 
+.player {
+    float: left;
+}
 
-/* footer with results*/
+#player-image {
+        display: inline-block;
+        margin: 2px 2px 2px 2px;
+        width: 80px;
+        height: 80px;
+}
+
+.computer {
+    float: right;
+}
+
+#computer-image {
+    display: inline-block;
+    margin: 2px 2px 2px 2px;
+    width: 80px;
+    height: 80px;
+}
+
+/* footer with score*/
 
 .footer {
     background-color: #e0a22f;
@@ -59,11 +90,9 @@ body {
     height: 100px;
 }
 
-.results-area {
-    float: left;
+.scores-area {
     text-align: center;
-    padding: 30px 30px 30px 30px;
-    margin: 25px 0 0 25px;
+    margin: 5px 0 0 5px;
 }
 
 /* media queries */
