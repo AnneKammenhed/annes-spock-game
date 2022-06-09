@@ -26,11 +26,11 @@ document.addEventListener("DOMContentLoaded", function() {
 function runGame(gameType) {
 
     //choose random computer choice
-    let computerChoice = Math.floor(Math.random() * 4)
+    let computerChoice = Math.floor(Math.random() * 4);
 
     if (gameType === "submit") {
-        displayComputerChoice (computerChoice);
-        displayPlayerChoice ();
+        displaySubmitQuestion(computerChoice);
+        displaySubmitQuestion(playerChoice);
     }
 
 } 
