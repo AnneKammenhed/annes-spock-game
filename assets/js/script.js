@@ -22,7 +22,7 @@ for (let button of buttons) {
 }
 
 /**
- * The main game function playGame
+ * The main game function playGame, players choise, computer random number and result
 */
 
 function playGame(playerChoice) {
@@ -34,7 +34,7 @@ function playGame(playerChoice) {
     computerImage.src = `assets/images/${[computerChoice]}.jpg`;
     computerImage.alt = choices[computerChoice];
 
-    let result = checkWinner(choices[computerChoice], choices[playerChoice]);
+    let result = checkAnswer(choices[playerChoice], choices[computerChoice]);
 
     updateScores(result);
 }
@@ -43,15 +43,30 @@ function playGame(playerChoice) {
  * Check answer function checkAnswer
  */
 function checkAnswer {
-    
+    if(computerChoice === 0 playerChoice === 0) 
+        result = draw
+
+    {computerChoice = "Rock";}
+        else if(computerChoice === 1) {computerChoice = "Paper";}
+        else if(computerChoice === 2) {computerChoice = "Scissors";}
+        else if(computerChoice === 3) {computerChoice = "Lizard";}
+    else (computerChoice === 4) {computerChoice = "Spock";}
+
+/**
+ * add you win / you loose message
+ */
+
+if(computerChoice === "Rock") 
+
 }
 
 /** 
  * display player choice
  */
-function displayPlayerChoice("player-image") {
+function displayPlayerChoice() {
+
     if (playerChoice) {
-        displayPlayerChoice();
+        displayPlayerImage;
     }
 }
 
@@ -59,14 +74,15 @@ function displayPlayerChoice("player-image") {
  * display computer choice
  */
 
- function displayComputerChoice("computer-image") {
+ function displayComputerChoice() {
+
     if (computerChoice) {
-        displayComputerChoice();
+        displayComputerImage;
     } 
  }
  
  /**
- * Add the wins for player and computer incrementScore
+ * Add the wins for player and computer incrementScore for spans "my-score" and "computer-score"
  */
 function incrementScore {
     

@@ -15,9 +15,10 @@
 </head>
 
 <body>
-    
-    <h1 class="logo">Annes Spock Game</h1>
+    <header><h1 class="logo">Annes Spock Game</h1></header> 
+
     <div class="game-area">
+        <h2>Make a choice:</h2>
         <div class="controls-area">
             <button aria-label="Rock" data-choice="0" class="btn btn--big btn--rock"><img src="assets/images/hand-rock-fontawesome.JPG" alt="hand sign rock"></button>
             <button aria-label="Paper" data-choice="1" class="btn btn--big btn--paper"><img src="assets/images/hand-paper-fontawesome.JPG" alt="hand sign paper"></button>
@@ -26,10 +27,12 @@
             <button aria-label="Spock" data-choice="4" class="btn btn--big btn--spock"><img src="assets/images/hand-spock-fontawesome.JPG" alt="hand sign spock"></button>
         </div>
         <div class="results-area">
-            <div class="player">Player image
+            <div class="player">
+                <span id="player-choice">Player choice</span>
                 <img id="player-image" src="assets/images/" alt="Rock Paper Scissors Lizard Spock">  
             </div> 
-            <div class="computer">Computer image
+            <div class="computer">
+                <span id="computer-choice">Computer choice</span>
                 <img id="computer-image" src="assets/images" alt="Rock Paper Scissors Lizard Spock">
             </div>
         </div>

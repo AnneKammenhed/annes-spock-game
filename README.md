@@ -6,11 +6,11 @@
 The game is for users who are interested in playing a fun, online game. The colour scheme is inspired by star-trek and with good contrast.
 
 <h2>Features</h2>
-The page cosists of a heading with a game area and a footer. 
+The page consists of a header with the logo, a div with the game area and a footer with scores. 
 
-The game area has five interactive symbols that when clicked runs the game. 
+The game area has five images that when clicked run the game. 
 
-Underneath the symbols the player choise displays by event listener the image for what the player chose. There is a computers choise beside it and it displays the random chiose of the computer.
+Underneath the symbols the player choice displays by event listener the image for what the player chose. There is a computers choice beside it and it displays the random chioce of the computer.
 
 There is a message displaying if you win or the computer wins.
 
