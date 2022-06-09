@@ -41,24 +41,30 @@ function playGame(playerChoice) {
 
 /**
  * Check answer function checkAnswer
+ * 
  */
 function checkAnswer {
-    if(computerChoice === 0 playerChoice === 0) 
-        result = draw
 
-    {computerChoice = "Rock";}
-        else if(computerChoice === 1) {computerChoice = "Paper";}
-        else if(computerChoice === 2) {computerChoice = "Scissors";}
-        else if(computerChoice === 3) {computerChoice = "Lizard";}
-    else (computerChoice === 4) {computerChoice = "Spock";}
-
-/**
- * add you win / you loose message
- */
-
-if(computerChoice === "Rock") 
+    if(playerChoice === computerChoice) {
+        let result = null;
+        return `It's a draw!`
+    } else if (playerChoice === "rock" && computerChoice === "scissors", "lizard") {
+        let result = playerChoice;
+    } else if (playerChoice === "paper" && computerChoice === "rock", "spock") {
+        let result = playerChoice;
+    } else if (playerChoice === "scissors" && computerChoice === "lizard", "paper") {
+        let result = playerChoice;
+    } else if (playerChoice === "lizard" && computerChoice === "paper", "spock") {
+        let result = playerChoice;
+    } else if (playerChoice === "spock" && computerChoice === "scissors", "rock") {
+        let result = playerChoice;
+    }
 
 }
+
+/**
+ * add you win / you loose message - alert? null = draw compoterChoice= you lose player choice - you win
+ */
 
 /** 
  * display player choice
@@ -84,6 +90,8 @@ function displayPlayerChoice() {
  /**
  * Add the wins for player and computer incrementScore for spans "my-score" and "computer-score"
  */
+
 function incrementScore {
-    
+    playerScore
+    computerScore
 }
