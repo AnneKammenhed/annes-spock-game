@@ -32,7 +32,6 @@ function runGame(gameType) {
         displaySubmitQuestion(computerChoice);
         displaySubmitQuestion(playerChoice);
     }
-
 } 
 
 /**
