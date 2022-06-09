@@ -43,7 +43,7 @@ body {
     font-size: large;
     }
 
-.btn a:hover {
+.btn i:hover {
     color: #e0a22f;
     background-color: #37434e;
 }
@@ -55,6 +55,16 @@ body {
     text-align: center;
     padding: 30px 30px 30px 30px;
     margin: 25px 0 0 25px;
+}
+
+/* footer*/
+
+.footer {
+    background-color: #e0a22f;
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100px;
 }
 
 /* media queries */

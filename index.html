@@ -19,22 +19,26 @@
     <h1 class="logo">Annes Spock Game</h1>
     <div class="game-area">
         <div class="controls-area">
-            <button class="btn btn--big btn--rock"><i class="fa-solid fa-hand-back-fist"></i></button>
-            <button class="btn btn--big btn--paper"><i class="fa-solid fa-hand"></i></button>
-            <button class="btn btn--big btn--scissors"><i class="fa-solid fa-hand-scissors"></i></button>
-            <button class="btn btn--big btn--lizard"><i class="fa-solid fa-hand-lizard"></i></button>
-            <button class="btn btn--big btn--spock"><i class="fa-solid fa-hand-spock"></i></button>
+            <button aria-label="Rock" data-choice="0" class="btn btn--big btn--rock"><i class="fa-solid fa-hand-back-fist"></i></button>
+            <button aria-label="Paper" data-choice="1" class="btn btn--big btn--paper"><i class="fa-solid fa-hand"></i></button>
+            <button aria-label="Scissors" data-choice="2" class="btn btn--big btn--scissors"><i class="fa-solid fa-hand-scissors"></i></button>
+            <button aria-label="Lizard" data-choice="3" class="btn btn--big btn--lizard"><i class="fa-solid fa-hand-lizard"></i></button>
+            <button aria-label="Spock" data-choice="4" class="btn btn--big btn--spock"><i class="fa-solid fa-hand-spock"></i></button>
         </div>
         <div class="results-area">
-            <span id="player">Player</span>
-            <span id="computer">Computer</span>
+            <div class="player">Player image
+                <img id="player-image" src="" alt="Rock Paper Scissors Lizard Spock">  
+            </div> 
+            <div class="computer">Computer image
+                <img id="compiter-image" src="" alt="Rock Paper Scissors Lizard Spock">
+            </div>
         </div>
     </div>
     <div class="scores-area">
         <p class="scores">My wins<span id="my-score">0</span></p>
         <p class="scores">Computer wins<span id="computer-score">0</span></p>
     </div>
-    
+    <footer class="footer"></footer>
     
     <script src="https://kit.fontawesome.com/93a6038a78.js" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
