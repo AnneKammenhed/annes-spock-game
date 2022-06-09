@@ -4,10 +4,10 @@ and choices
 */
 
 const buttons = document.getElementsByTagName("button");
-const playerImage = document.getElementsByClassId("player-image")
-const computerImage = document.getElementsByClassId("computer-image")
-const playerScore = document.getElementsById("my-score")
-const computerScore = document.getElementById("computer-score")
+const playerImage = document.getElementsByClassId("player-image");
+const computerImage = document.getElementsByClassId("computer-image");
+const playerScore = document.getElementsById("my-score");
+const computerScore = document.getElementById("computer-score");
 const choices = ("rock", "paper", "scissors", "lizard", "spock");
 
 /**
@@ -43,36 +43,34 @@ function playGame(playerChoice) {
  * Check answer function checkAnswer
  * 
  */
-function checkAnswer {
+function checkAnswer (playerChoise, computerChoice) {
 
     if(playerChoice === computerChoice) {
         result = null;
+        alert("It's a draw!");
         
     } else if (playerChoice === "rock" && computerChoice === "scissors", "lizard") {
         result = playerChoice;
+        return `You win`; 
     } else if (playerChoice === "paper" && computerChoice === "rock", "spock") {
         result = playerChoice;
+        return `You win`;
     } else if (playerChoice === "scissors" && computerChoice === "lizard", "paper") {
         result = playerChoice;
+        return `You win`;
     } else if (playerChoice === "lizard" && computerChoice === "paper", "spock") {
         result = playerChoice;
-    } else (playerChoice === "spock" && computerChoice === "scissors", "rock") {
+        return `You win`;
+    } else (playerChoice === "spock" && computerChoice === "scissors", "rock"); {
         result = playerChoice;
-    } 
+        return `You win`;
+    }
 }
 
 /**
  * add you win / you loose message - alert? null = draw compoterChoice= you lose player choice - you win
  */
 
-if (result === playerChoice) {
-    return `You win"`
-     
-    } else if (result === computerChoice) {
-        return `You loose!`
-    } else {
-        return `It's a draw!`
-}
 
 /** 
  * display player choice
@@ -99,7 +97,12 @@ function displayPlayerChoice() {
  * Add the wins for player and computer incrementScore for spans "my-score" and "computer-score"
  */
 
-function incrementScore {
-    playerScore
-    computerScore
+function incrementPlayerScore() {
+    let oldScore = parseInt(document.getElementById("my-score").innerText);
+    document.getElementById("my-score").innerText = ++oldScore;
+}
+
+function incrementComputerScore() {
+    let oldScore = parseInt(document.getElementById("computer-score").innerText);
+    document.getElementById("computer-score").innerText = ++oldScore;
 }

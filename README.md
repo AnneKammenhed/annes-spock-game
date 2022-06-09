@@ -30,13 +30,23 @@ There is a message displaying if you win or the computer wins.
 
 The footer adds up the wins for the player and the computer. 
 
-<h2>Tests</h2> 
+<h2>Testing</h2> 
 
 bild som visar olika skärmstorlekar
 
 lighthouse
 
+https://jshint.com/
+
+https://validator.w3.org/
+
+https://jigsaw.w3.org/css-validator/
+
+<h2>Bugs</h2>
+fixed and unfixed
+
 <h2>Where can I find the site and the code?</h2>
+Deployment of the code is here:
 
 <h2>Credits</h2>
 The site is built on the Code Institute student template for Gitpod. Inspiration has been taken from the love maths project and the rock, paper, scissors game provided by the Code Institute. I also browsed thoruh some other games on github to get some inspiration.
