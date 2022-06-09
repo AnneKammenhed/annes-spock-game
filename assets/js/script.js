@@ -46,25 +46,33 @@ function playGame(playerChoice) {
 function checkAnswer {
 
     if(playerChoice === computerChoice) {
-        let result = null;
-        return `It's a draw!`
+        result = null;
+        
     } else if (playerChoice === "rock" && computerChoice === "scissors", "lizard") {
-        let result = playerChoice;
+        result = playerChoice;
     } else if (playerChoice === "paper" && computerChoice === "rock", "spock") {
-        let result = playerChoice;
+        result = playerChoice;
     } else if (playerChoice === "scissors" && computerChoice === "lizard", "paper") {
-        let result = playerChoice;
+        result = playerChoice;
     } else if (playerChoice === "lizard" && computerChoice === "paper", "spock") {
-        let result = playerChoice;
-    } else if (playerChoice === "spock" && computerChoice === "scissors", "rock") {
-        let result = playerChoice;
-    }
-
+        result = playerChoice;
+    } else (playerChoice === "spock" && computerChoice === "scissors", "rock") {
+        result = playerChoice;
+    } 
 }
 
 /**
  * add you win / you loose message - alert? null = draw compoterChoice= you lose player choice - you win
  */
+
+if (result === playerChoice) {
+    return `You win"`
+     
+    } else if (result === computerChoice) {
+        return `You loose!`
+    } else {
+        return `It's a draw!`
+}
 
 /** 
  * display player choice
