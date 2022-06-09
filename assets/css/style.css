@@ -25,22 +25,21 @@ body {
     box-sizing: border-box;
     border-radius: 25px;
     width: 90%;
-    height: 200px;
+    height: 400px;
 }
 
 /* controls area */
 
 .btn {
-    border-radius: 25px;
     color: #37434e;
-    background-color: #e0a22f;
     width: 15%;
     height:75px;
     padding: 30px 30px 30px 30px;
     margin: 25px 0 0 25px;
-    border: 1px solid #C9D4CD;
+    border: 1px solid yellowgreen;
+    background-color: yellowgreen;
     box-sizing: border-box;
-    font-size: large;
+    font-size: 100px;
     }
 
 .btn i:hover {
@@ -62,8 +61,9 @@ body {
 .footer {
     background-color: #e0a22f;
     position: absolute;
-    width: 100%;
+    width: 90%;
     box-sizing: border-box;
+    border-radius: 25px;
     height: 100px;
 }
 
