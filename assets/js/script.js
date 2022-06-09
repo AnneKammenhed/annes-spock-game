@@ -24,6 +24,11 @@ for (let {} of buttons) {
  * The main game function runGame
 */
 
+function playGame(playerChoice) {
+    playerImage.src = `assets/images/${[playerChoice]}.png`;
+    playerImage.alt = choices[playerChoice];
+}
+
 /**
  * Check correct answer checkAnswer
  */

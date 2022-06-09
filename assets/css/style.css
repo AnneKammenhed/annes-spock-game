@@ -31,18 +31,18 @@ body {
 /* controls area */
 
 .btn {
-    color: #37434e;
-    width: 15%;
-    height:75px;
-    padding: 30px 30px 30px 30px;
-    margin: 25px 0 0 25px;
-    border: 1px solid yellowgreen;
-    background-color: yellowgreen;
-    box-sizing: border-box;
-    font-size: 100px;
+    margin: 10px 10px 10px 10px;
+    text-align: center;
+}
+
+.btn img {
+   display: inline-block;
+   margin: 2px 2px 2px 2px;
+   width: 80px;
+   height: 80px;
     }
 
-.btn i:hover {
+.btn img:hover {
     color: #e0a22f;
     background-color: #37434e;
 }
