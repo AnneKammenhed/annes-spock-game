@@ -40,12 +40,12 @@ body {
    margin: 2px 2px 2px 2px;
    width: 80px;
    height: 80px;
-    }
+ }
 
-    .btn img:hover {
-        color: #e0a22f;
-        background-color: #37434e;
-    }
+.btn img:hover {
+    color: #e0a22f;
+    background-color: #37434e;
+}
 
 /* results area*/
 
