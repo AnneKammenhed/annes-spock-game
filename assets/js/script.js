@@ -16,7 +16,33 @@ const computerScore_span = document.getElementById("computer-score");
 let userScore = 0;
 let computerScore = 0;
 
-///**the computer choose function */
+//** the event listeners to play the game*/
+function main () {
+
+    rock_button.addEventListener("click", function() {
+        game("ro");
+    });
+
+    paper_button.addEventListener("click", function() {
+        game("pa");
+    });
+
+    scissors_button.addEventListener("click", function() {
+        game("sc");
+    });
+
+    lizard_button.addEventListener("click", function() {
+        game("li");
+    });
+
+    spock_button.addEventListener("click", function() {
+        game("sp");
+    });
+}
+
+main();
+
+///**the computer choose function random choice between five options*/
 function getComputerChoice() {
     const choices = ["ro", "pa", "sc", "li", "sp"];
     const randomNumber = Math.floor(Math.random() * 5);
@@ -30,23 +56,6 @@ function convertToWord(letter) {
     if(letter === "sc") return "Scissors";
     if(letter === "li") return "Lizard";
     if(letter === "sp") return "Spock";
-}
-
-//**add scores to the page and add scentence about what has been played */
-function win(userChoice, computerChoice) {
-    userScore++;
-    playerScore_span.innerHTML = userScore;
-    choiceArea_h2.innerHTML = convertToWord(userChoice) + " beats " + convertToWord(computerChoice) + ". You win!";
-}
-
-function lose(userChoice, computerChoice) {
-    computerScore++;
-    computerScore_span.innerHTML = computerScore;
-    choiceArea_h2.innerHTML = convertToWord(userChoice) + " looses against " + convertToWord(computerChoice) + ". You lost!";
-}
-
-function draw(userChoice, computerChoice) {
-   choiceArea_h2.innerHTML = convertToWord(userChoice) + " is the same as " + convertToWord(computerChoice) + ". It's a draw!";
 }
 
 /**
@@ -89,29 +98,19 @@ function draw(userChoice, computerChoice) {
     }
 }
 
-
-//** the event listeners to play the game*/
-function main () {
-
-    rock_button.addEventListener("click", function() {
-        game("ro");
-    });
-
-    paper_button.addEventListener("click", function() {
-        game("pa");
-    });
-
-    scissors_button.addEventListener("click", function() {
-        game("sc");
-    });
-
-    lizard_button.addEventListener("click", function() {
-        game("li");
-    });
-
-    spock_button.addEventListener("click", function() {
-        game("sp");
-    });
+//**add scores to the page and add scentence about what has been played */
+function win(userChoice, computerChoice) {
+    userScore++;
+    playerScore_span.innerHTML = userScore;
+    choiceArea_h2.innerHTML = convertToWord(userChoice) + " beats " + convertToWord(computerChoice) + ". You win!";
 }
 
-main();
+function lose(userChoice, computerChoice) {
+    computerScore++;
+    computerScore_span.innerHTML = computerScore;
+    choiceArea_h2.innerHTML = convertToWord(userChoice) + " looses against " + convertToWord(computerChoice) + ". You lost!";
+}
+
+function draw(userChoice, computerChoice) {
+   choiceArea_h2.innerHTML = convertToWord(userChoice) + " is the same as " + convertToWord(computerChoice) + ". It's a draw!";
+}

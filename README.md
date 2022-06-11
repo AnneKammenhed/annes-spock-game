@@ -32,7 +32,9 @@ The footer adds up the wins for the player and the computer.
 
 bild som visar olika skärmstorlekar
 
-lighthouse
+I ran lighthouse a couple of times and got 100% accessability the last check:
+
+<img src="assets/images/lighthouse-annes-spock-game.JPG"></img>
 
 https://jshint.com/
 
