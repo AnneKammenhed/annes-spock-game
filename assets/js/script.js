@@ -52,62 +52,66 @@ function draw(userChoice, computerChoice) {
 /**
  * The main rules for the game */
 
-function game(userChoice) {   
+ function game(userChoice) {   
     const computerChoice = getComputerChoice();
-    if (userChoice === computerChoice) {
-        draw(userChoice, computerChoice);
-        } else if(userChoice === "ro", computerChoice === "sc" || computerChoice === "li") {
+    switch (userChoice + computerChoice) {
+        case "rosc":
+        case "roli":
+        case "pasp":
+        case "paro":
+        case "scli":
+        case "scpa":
+        case "lipa":
+        case "lisp":
+        case "spsc":    
+        case "spro":   
             win(userChoice, computerChoice);
-        } else if(userChoice === "ro", computerChoice === "sp" || computerChoice === "pa") {
+            break;
+        case "ropa":
+        case "rosp":
+        case "pasc":
+        case "pali":
+        case "scro":
+        case "scsp":
+        case "liro":
+        case "lisc":
+        case "sppa":    
+        case "spli": 
             lose(userChoice, computerChoice);
-
-        } else if(userChoice === "pa", computerChoice === "sp" || computerChoice === "ro") {
-            win(userChoice, computerChoice);
-        } else if(userChoice === "pa", computerChoice === "li" || computerChoice === "sc") {
-            lose(userChoice, computerChoice);
-        
-        } else if (userChoice === "sc", computerChoice === "pa" || computerChoice === "li") {
-            win(userChoice, computerChoice);
-        } else if (userChoice === "sc", computerChoice === "ro" || computerChoice === "sp") {
-            lose(userChoice, computerChoice);
-
-        } else if (userChoice === "li" && computerChoice === "pa" || computerChoice === "sp") {
-            win(userChoice, computerChoice);
-        } else if (userChoice === "li" && computerChoice === "ro" || computerChoice === "sc") {
-            lose(userChoice, computerChoice);
-
-        } else if (userChoice === "sp" && computerChoice === "sc" || computerChoice === "ro") {
-            win(userChoice, computerChoice);
-        } else if (userChoice === "sp" && computerChoice === "pa" || computerChoice === "li") {
-            lose(userChoice, computerChoice);
-    }  else {
-        console.log("fail");
+            break;
+        case "roro":
+        case "papa":
+        case "scsc":
+        case "lili":    
+        case "spsp":
+            draw(userChoice, computerChoice);
+            break; 
     }
-} 
+}
 
-//** the game function*/
+
+//** the event listeners to play the game*/
 function main () {
 
-    // event listener/
     rock_button.addEventListener("click", function() {
         game("ro");
-    })
+    });
 
     paper_button.addEventListener("click", function() {
         game("pa");
-    })
+    });
 
     scissors_button.addEventListener("click", function() {
         game("sc");
-    })
+    });
 
     lizard_button.addEventListener("click", function() {
         game("li");
-    })
+    });
 
     spock_button.addEventListener("click", function() {
         game("sp");
-    })
+    });
 }
 
 main();

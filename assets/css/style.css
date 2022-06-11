@@ -30,6 +30,8 @@ body {
     border-radius: 25px;
     width: 90%;
     height: 300px;
+    margin-left: 5px;
+    margin-bottom: 5px;
 }
 
 .game-area-h2 {
@@ -97,15 +99,13 @@ body {
     box-sizing: border-box;
     border-radius: 25px;
     height: 150px;
-}
-
-.scores-area {
-    text-align: center;
-    margin: 5px 0 0 5px;
+    margin-left: 5px;
 }
 
 .score-div {
     padding-left: 20px;
+    margin-top: 5px;
+    text-align: left;
 }
 
 /* media queries */
