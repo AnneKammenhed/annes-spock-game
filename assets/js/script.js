@@ -12,7 +12,7 @@ const scoreArea_div = document.getElementsByClassName("score-area");
 const playerScore_span = document.getElementById("player-score");
 const computerScore_span = document.getElementById("computer-score");
 
-/**scores */
+/** let for scores*/
 let userScore = 0;
 let computerScore = 0;
 
@@ -23,74 +23,91 @@ function getComputerChoice() {
     return choices[randomNumber];
 }
 
+//**function to get understandable words on page */
+function convertToWord(letter) {
+    if(letter === "ro") return "Rock";
+    if(letter === "pa") return "Paper";
+    if(letter === "sc") return "Scissors";
+    if(letter === "li") return "Lizard";
+    if(letter === "sp") return "Spock";
+}
+
+//**add scores to the page and add scentence about what has been played */
+function win(userChoice, computerChoice) {
+    userScore++;
+    playerScore_span.innerHTML = userScore;
+    choiceArea_h2.innerHTML = convertToWord(userChoice) + " beats " + convertToWord(computerChoice) + ". You win!";
+}
+
+function lose(userChoice, computerChoice) {
+    computerScore++;
+    computerScore_span.innerHTML = computerScore;
+    choiceArea_h2.innerHTML = convertToWord(userChoice) + " looses against " + convertToWord(computerChoice) + ". You lost!";
+}
+
+function draw(userChoice, computerChoice) {
+   choiceArea_h2.innerHTML = convertToWord(userChoice) + " is the same as " + convertToWord(computerChoice) + ". It's a draw!";
+}
+
 /**
- * The main game function to run the game
-*/
-function runGame(_gameType) {
+ * The main rules for the game */
 
-    playerImage.src = `assets/images/${[playerChoice]}.jpg`;
+function game(userChoice) {   
+    const computerChoice = getComputerChoice();
+    if (userChoice === computerChoice) {
+        draw(userChoice, computerChoice);
+        } else if(userChoice === "ro", computerChoice === "sc" || computerChoice === "li") {
+            win(userChoice, computerChoice);
+        } else if(userChoice === "ro", computerChoice === "sp" || computerChoice === "pa") {
+            lose(userChoice, computerChoice);
 
-    //choose random computer choice
-    let computerChoice = Math.floor(Math.random() * 4);
+        } else if(userChoice === "pa", computerChoice === "sp" || computerChoice === "ro") {
+            win(userChoice, computerChoice);
+        } else if(userChoice === "pa", computerChoice === "li" || computerChoice === "sc") {
+            lose(userChoice, computerChoice);
+        
+        } else if (userChoice === "sc", computerChoice === "pa" || computerChoice === "li") {
+            win(userChoice, computerChoice);
+        } else if (userChoice === "sc", computerChoice === "ro" || computerChoice === "sp") {
+            lose(userChoice, computerChoice);
 
-    computerImage.src = `assets/images/${[computerChoice]}.jpg`;
+        } else if (userChoice === "li" && computerChoice === "pa" || computerChoice === "sp") {
+            win(userChoice, computerChoice);
+        } else if (userChoice === "li" && computerChoice === "ro" || computerChoice === "sc") {
+            lose(userChoice, computerChoice);
 
-    let result = checkAnswer(choices[playerChoice], choices[computerChoice]);
-
-    updateScores(result);
+        } else if (userChoice === "sp" && computerChoice === "sc" || computerChoice === "ro") {
+            win(userChoice, computerChoice);
+        } else if (userChoice === "sp" && computerChoice === "pa" || computerChoice === "li") {
+            lose(userChoice, computerChoice);
+    }  else {
+        console.log("fail");
+    }
 } 
 
-/**
- * Check wich answer is true checkAnswer function
-*/
+//** the game function*/
+function main () {
 
-function checkAnswer (_playerChoise, computerChoice) {
+    // event listener/
+    rock_button.addEventListener("click", function() {
+        game("ro");
+    })
 
-    if(playerChoice === computerChoice) {
-        result.textContent = "It's a draw!";
-        
-    } else if (playerChoice === "rock" && computerChoice === "scissors", "lizard") {
-        result.textContent = "You win!";
-        playerScore++;
-        playerScore.textContent = playerScore; 
-    } else if (playerChoice === "paper" && computerChoice === "rock", "spock") {
-        result = playerChoice;
-        return `You win`;
-    } else if (playerChoice === "scissors" && computerChoice === "lizard", "paper") {
-        result = playerChoice;
-        return `You win`;
-    } else if (playerChoice === "lizard" && computerChoice === "paper", "spock") {
-        result = playerChoice;
-        return `You win`;
-    } else (playerChoice === "spock" && computerChoice === "scissors", "rock"); {
-        result = playerChoice;
-        return `You win`;
-    }
+    paper_button.addEventListener("click", function() {
+        game("pa");
+    })
+
+    scissors_button.addEventListener("click", function() {
+        game("sc");
+    })
+
+    lizard_button.addEventListener("click", function() {
+        game("li");
+    })
+
+    spock_button.addEventListener("click", function() {
+        game("sp");
+    })
 }
 
-/**
- * Add the wins for player and computer incrementScore for spans "my-score" and "computer-score"
- */
-function incrementPlayerScore () {
-
-}
-
-function incrementComputerScore () {
-
-}
-
-/** 
- * display player choice
- */
-
-function displayPlayerChoice(){
-    document.getElementById("player-choice").src = `assets/images/${[playerChoice]}.jpg`;
-}
-
-/**
- * display computer choice
- */
-
- function displayComputerChoice(){
-    document.getElementById("computer-choice").src = `assets/images/${[computerChoice]}.jpg`;
-}
+main();
