@@ -16,22 +16,12 @@ const computerScore_span = document.getElementById("computer-score");
 let userScore = 0;
 let computerScore = 0;
 
-/**
- * Start playing game with the buttons - call the main game
- */
-document.addEventListener("DOMContentLoaded", function() {
-    let buttons = document.getElementsByTagName("Button");
-
-    for (let button of buttons) {
-        button.addEventListener("click", function() {
-            if (this.getAttribute("data-type")) {
-                runGame(gameType);
-            } 
-        })
-    }
-
-    runGame("submit");
-})
+///**the computer choose function */
+function getComputerChoice() {
+    const choices = ["ro", "pa", "sc", "li", "sp"];
+    const randomNumber = Math.floor(Math.random() * 5);
+    return choices[randomNumber];
+}
 
 /**
  * The main game function to run the game

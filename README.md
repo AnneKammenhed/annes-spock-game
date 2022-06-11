@@ -41,7 +41,7 @@ https://validator.w3.org/
 https://jigsaw.w3.org/css-validator/
 
 <h2>Bugs</h2>
-To learn along the way, I wanted to bild the game with an if-else-statement. Since I couldn't get the code to work with the five options, I built out a game with only two options first. Link to that code below.
+To be able to follow the logic step by step and learn along the way, I wanted to bild the game with an if-else-statement. Since I couldn't get the code to work with the five options, I built out a game with only two options first. Link to that code below.
 
 fixed and unfixed
 
