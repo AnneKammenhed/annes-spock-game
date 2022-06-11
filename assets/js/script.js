@@ -1,15 +1,20 @@
 
-/** Constants for DOM elements and choices
-*/
-const buttons = document.getElementsByTagName("button");
+/** Constants */
+const rock_button = document.getElementById("ro");
+const paper_button = document.getElementById("pa");
+const scissors_button = document.getElementById("sc");
+const lizard_button = document.getElementById("li");
+const spock_button = document.getElementById("sp");
 
-const playerImage = document.getElementsByClassId("player-image");
-const playerScore = document.getElementsById("my-score");
+const choiceArea_h2 = document.querySelector(".choice-area > h2");
 
-const computerImage = document.getElementsByClassId("computer-image");
-const computerScore = document.getElementById("computer-score");
+const scoreArea_div = document.getElementsByClassName("score-area");
+const playerScore_span = document.getElementById("player-score");
+const computerScore_span = document.getElementById("computer-score");
 
-const choices = ("rock", "paper", "scissors", "lizard", "spock");
+/**scores */
+let userScore = 0;
+let computerScore = 0;
 
 /**
  * Start playing game with the buttons - call the main game

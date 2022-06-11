@@ -3,7 +3,7 @@
 `python3 -m http.server`
 
 <h2>Who is it for?</h2>
-The game is for users who are interested in playing a fun, online game. The colour scheme is inspired by star-trek and with good contrast.
+The game is for users who are interested in playing a fun, online game. The colour scheme is inspired by star-trek.
 
 <h3>Remember the rules:</h3>
 <ul>
@@ -24,9 +24,7 @@ The page consists of a header with the logo, a div with the game area and a foot
 
 The game area has five images that when clicked run the game. 
 
-Underneath the symbols the player choice displays by event listener the image for what the player chose. There is a computers choice beside it and it displays the random chioce of the computer.
-
-There is a message displaying if you win or the computer wins.
+Underneath the images there is a message with the outcome of the game is visible - who wins? - who loses? 
 
 The footer adds up the wins for the player and the computer. 
 
@@ -43,10 +41,17 @@ https://validator.w3.org/
 https://jigsaw.w3.org/css-validator/
 
 <h2>Bugs</h2>
+To learn along the way, I wanted to bild the game with an if-else-statement. Since I couldn't get the code to work with the five options, I built out a game with only two options first. Link to that code below.
+
 fixed and unfixed
 
 <h2>Where can I find the site and the code?</h2>
-Deployment of the code is here:
+The two alternatives code is here: 
+
+The code for project two is here:
+
+The deployed site for project two is here:
+
 
 <h2>Credits</h2>
 The site is built on the Code Institute student template for Gitpod. Inspiration has been taken from the love maths project and the rock, paper, scissors game provided by the Code Institute. I also browsed thoruh some other games on github to get some inspiration.
