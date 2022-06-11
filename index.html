@@ -18,31 +18,27 @@
     <header><h1 class="logo">Annes Spock Game</h1></header> 
 
     <div class="game-area">
-        <h2>Make a choice:</h2>
+        <h2 class="game-area-h2">Make your choice!</h2>
         <div class="controls-area">
-            <button aria-label="Rock" data-type="submit" data-choice="0" class="btn rock"><img src="assets/images/hand-rock-fontawesome.JPG" alt="hand sign rock"></button>
-            <button aria-label="Paper" data-type="submit" data-choice="1" class="btn paper"><img src="assets/images/hand-paper-fontawesome.JPG" alt="hand sign paper"></button>
-            <button aria-label="Scissors" data-type="submit" data-choice="2" class="btn scissors"><img src="assets/images/hand-scissors-fontawesome.JPG" alt="hand sign scissors"></button>
-            <button aria-label="Lizard" data-type="submit" data-choice="3" class="btn lizard"><img src="assets/images/hand-lizard-fontawesome.JPG" alt="hand sign lizard"></button>
-            <button aria-label="Spock" data-type="submit" data-choice="4" class="btn spock"><img src="assets/images/hand-spock-fontawesome.JPG" alt="hand sign spock"></button>
+            <button id="ro" data-type="submit" class="btn rock"><img src="assets/images/hand-rock-fontawesome.JPG" alt="hand sign rock"></button>
+            <button id="pa" data-type="submit" class="btn paper"><img src="assets/images/hand-paper-fontawesome.JPG" alt="hand sign paper"></button>
+            <button id="sc" data-type="submit" class="btn scissors"><img src="assets/images/hand-scissors-fontawesome.JPG" alt="hand sign scissors"></button>
+            <button id="li" data-type="submit" class="btn lizard"><img src="assets/images/hand-lizard-fontawesome.JPG" alt="hand sign lizard"></button>
+            <button id="sp" data-type="submit" class="btn spock"><img src="assets/images/hand-spock-fontawesome.JPG" alt="hand sign spock"></button>
         </div>
-        <div class="results-area">
-            <div class="player">
-                <span id="player-choice"></span>
-                <img id="player-image" src="`assets/images/${[playerChoice]}.jpg`" alt="Rock Paper Scissors Lizard Spock">  
-            </div> 
-            <div>Its a draw/you win/you loose</div>
-            <div class="computer">
-                <span id="computer-choice">Computer choice(placeholder):</span>
-                <img id="computer-image" src=" `assets/images/${[computerChoice]}.jpg`" alt="Rock Paper Scissors Lizard Spock">
-            </div>
+        <div class="choice-area">
+            <h2 class="game-area-h2">And the winner is...</h2>
         </div>
     </div>
     
     <footer class="footer">
-        <div class="scores-area">
-            <p class="scores">My wins<span id="my-score">0</span></p>
-            <p class="scores">Computer wins<span id="computer-score">0</span></p>
+        <div class="score-area">
+            <div class="player-score score-div">
+                <h2>Your score: <span id="player-score">0</span></h2>
+            </div>
+            <div class="computer-score score-div">
+                <h2>Computer score: <span id="computer-score">0</span></h2>
+            </div>
         </div>
     </footer>
     
