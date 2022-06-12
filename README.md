@@ -1,7 +1,5 @@
 <h1>Welcome to Annes Spock Game!</h1>
 
-`python3 -m http.server`
-
 <h2>Who is it for?</h2>
 The game is for users who are interested in playing a fun, online game. The colour scheme is inspired by star-trek.
 
